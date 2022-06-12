@@ -22,10 +22,11 @@ const FormButton = ({ onSubmit, disabled = false }) => (
   </Button>
 );
 
-const FetchButton = ({ onFetch, text, dataTestId }) => (
+const FetchButton = ({ onFetch, text, dataTestId, value }) => (
   <Button
     data-testid={dataTestId}
     onClick={onFetch}
+    value={value}
     styleType='fetch'
     animate={{
       scale: 1.2,

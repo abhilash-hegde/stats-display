@@ -17,6 +17,11 @@ export const Footer = ({ onInputNumber, onDataReload }) => {
     onInputNumber(inputValue);
   };
 
+  const onFetch = ({ target }) => {
+    setInputValue(null);
+    onDataReload(target.value);
+  };
+
   return (
     <FooterContainer>
       <FormContainer>
@@ -31,12 +36,14 @@ export const Footer = ({ onInputNumber, onDataReload }) => {
           <FetchButton
             dataTestId='fetch-button-1'
             text='Reload JSON-1234 Data'
-            onFetch={() => onDataReload("data-1234.json")}
+            value='data-1234.json'
+            onFetch={onFetch}
           />
           <FetchButton
             dataTestId='fetch-button-2'
             text='Reload JSON-4321 Data'
-            onFetch={() => onDataReload("data-4321.json")}
+            value='data-4321.json'
+            onFetch={onFetch}
           />
         </ReloadButtons>
       </ReloadContainer>
