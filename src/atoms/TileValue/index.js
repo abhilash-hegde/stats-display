@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const Value = styled(motion.h3)`
   margin: 0px;
   user-select: none;
+  font-size: 1.5rem;
 `;
 
 const statVariants = {

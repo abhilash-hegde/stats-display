@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 
 const fetchCss = css`
   border-radius: 44px;
-  width: 375px;
+  max-width: 375px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: ${({ theme }) => theme.btn2};
+
 `;
 
 const formBtn = css`
@@ -30,6 +33,7 @@ const Button = styled(motion.button)`
   color: #fff;
   outline: none;
   cursor: pointer;
+  font-size: 1.5rem;
 `;
 
 export default Button;

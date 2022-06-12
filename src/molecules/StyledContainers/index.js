@@ -17,7 +17,9 @@ const MainContainer = styled.div`
 const FooterContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  height: 340px;
+  // height: 340px;
+  height: calc(100vh - 450px);
+  min-height: 300px;
   min-width: 100vw;
   align-items: center;
   justify-content: space-around;
@@ -73,12 +75,16 @@ const ReloadContainer = styled.div`
 
 const ReloadButtons = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   height: 100px;
   min-width: 100vw;
+  gap: 100px;
   background-color: ${(props) => props.theme.footer};
+  @media (max-width: 1000px) {
+    gap: 50px;
+  }
 `;
 
 const TileContainer = styled(motion.div)`
